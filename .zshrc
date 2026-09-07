@@ -28,6 +28,10 @@ source "$HOME/.config/zsh/aliases.zsh"
 source "$HOME/.config/zsh/fzf.zsh"
 source "$HOME/.config/zsh/plugins.zsh"
 
+if [[ "$(tty)" = "/dev/tty2" ]]; then
+	exec niri-session
+fi
+
 cd $HOME
 
 eval "$(starship init zsh)"
