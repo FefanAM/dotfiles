@@ -9,3 +9,5 @@ alias tree='eza --tree --icons auto'
 compdef eza=ls
 
 alias cr='cargo run'
+
+alias venv='source venv/bin/activate'
