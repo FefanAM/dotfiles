@@ -7,17 +7,16 @@ return {
 				flavour = "frappe",
 				transparent_background = true,
 				float = {
-					transparent = true, -- enable transparent floating windows
+					transparent = false, -- enable transparent floating windows
 					solid = false, -- use solid styling for floating windows, see |winborder|
 				},
 				integrations = {
 					cmp = true,
 					nvimtree = true,
 					lualine = {
-						all = function(colors)
+						all = function()
 							---@type CtpIntegrationLualineOverride
 							return {
-								-- Specifying a normal-mode status line override for section a's background and b's foreground to use lavender like the main Catppuccin theme
 								normal = {
 									c = { bg = "#414559" },
 								}
@@ -26,6 +25,7 @@ return {
 					}
 				}
 			})
+
 			vim.cmd.colorscheme("catppuccin")
 		end
 	},
