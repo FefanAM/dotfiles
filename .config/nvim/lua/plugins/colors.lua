@@ -1,19 +1,32 @@
-local function enable_transparency()
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-end
-
 return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-
-	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
 		config = function()
-			vim.cmd("colorscheme catppuccin")
-			enable_transparency()
+			require("catppuccin").setup({
+				flavour = "frappe",
+				transparent_background = true,
+				float = {
+					transparent = true, -- enable transparent floating windows
+					solid = false, -- use solid styling for floating windows, see |winborder|
+				},
+				integrations = {
+					cmp = true,
+					nvimtree = true,
+					lualine = {
+						all = function(colors)
+							---@type CtpIntegrationLualineOverride
+							return {
+								-- Specifying a normal-mode status line override for section a's background and b's foreground to use lavender like the main Catppuccin theme
+								normal = {
+									c = { bg = "#414559" },
+								}
+							}
+						end,
+					}
+				}
+			})
+			vim.cmd.colorscheme("catppuccin")
 		end
 	},
 	{
@@ -22,7 +35,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		opts = {
-			theme = "catppuccin",
+			theme = "tomorrow_night",
 		}
 	},
 }
