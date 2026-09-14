@@ -8,4 +8,7 @@ return {
 	{
 		"tpope/vim-fugitive",
 	},
+	{
+		'brianhuster/live-preview.nvim',
+	},
 }
