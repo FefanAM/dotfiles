@@ -11,3 +11,8 @@ compdef eza=ls
 alias cr='cargo run'
 
 alias venv='source venv/bin/activate'
+
+# ---------- flatpak ---------
+
+alias zen='flatpak run app.zen_browser.zen'
+alias fluxer='flatpak run app.fluxer.Fluxer'
