@@ -3,6 +3,7 @@ return {
 	opts = {
 		ensure_installed = {
 			"ts_ls",
+			"vue_ls",
 			"html",
 			"cssls",
 			"lua_ls",
