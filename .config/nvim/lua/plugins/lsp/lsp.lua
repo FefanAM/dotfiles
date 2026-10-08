@@ -33,6 +33,10 @@ return {
 					lspconfig.ts_ls.setup({
 						capabilities = capabilities,
 						filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+						on_attach = function(client, bufnr)
+							client.server_capabilities.documentFormattingProvider = false
+							client.server_capabilities.documentRangeFormattingProvider = false
+						end,
 						init_options = {
 							plugins = {
 								{
