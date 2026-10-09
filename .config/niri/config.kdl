@@ -8,6 +8,7 @@
 // https://niri-wm.github.io/niri/Configuration:-Input
 
 prefer-no-csd
+spawn-at-startup "ghostty"
 
 input {
     keyboard {
@@ -327,7 +328,7 @@ window-rule {
     match app-id="com.mitchellh.ghostty"
     draw-border-with-background false
 	background-effect {
-		xray true
+		xray false
 		blur true
 		noise 0.01
 		saturation 1.5
@@ -349,7 +350,7 @@ window-rule {
     draw-border-with-background false
 
 	background-effect {
-		xray true
+		xray false
 		blur true
 		saturation 1
 	}
@@ -399,6 +400,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open file manager: nautilus" {spawn-sh "nautilus";}
     Mod+B hotkey-overlay-title="Open Browser: zen" {spawn-sh "flatpak run app.zen_browser.zen";}
+	Mod+S {spawn "sream";}
     Mod+N {spawn-sh "ghostty -e nvim";}
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
