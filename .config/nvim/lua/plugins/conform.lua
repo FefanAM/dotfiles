@@ -21,9 +21,10 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "isort", "black" },
-			javascript = { "prettierd", "prettier", stop_after_first = true },
-			typescript = { "prettierd", "prettier", stop_after_first = true },
-			c = { "clang_format" }
+			javascript = { "prettier" },
+			typescript = { "prettier" },
+			c = { "clang_format" },
+			vue = { "prettier" },
 		},
 		-- Set default options
 		default_format_opts = {
@@ -34,13 +35,16 @@ return {
 		-- Customize formatters
 		formatters = {
 			clang_format = {
-				append_args = { "--style={IndentWidth: 4}" }
+				append_args = { "--style={IndentWidth: 4}" },
 			},
 			stylua = {
-				append_args = { "--indent_width", "4" },
+				append_args = { "--indent-width", "4" },
 			},
 			shfmt = {
 				append_args = { "-i", "2" },
+			},
+			prettier = {
+				append_args = { "--tab-width", "4" },
 			},
 		},
 	},
