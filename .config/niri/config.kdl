@@ -396,13 +396,13 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Super+Shift+grave { spawn-sh "ghostty --command='nvim ~/.config/niri/config.kdl'";}
+    Super+Shift+grave { spawn-sh "ghostty --command='nvim ~/dotfiles/'";}
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+E hotkey-overlay-title="Open file manager: nautilus" {spawn-sh "nautilus";}
+    Mod+E hotkey-overlay-title="Open file manager: nautilus" {spawn "nautilus";}
     Mod+B hotkey-overlay-title="Open Browser: zen" {spawn-sh "flatpak run app.zen_browser.zen";}
 	Mod+S {spawn "steam";}
     Mod+N {spawn-sh "ghostty -e nvim";}

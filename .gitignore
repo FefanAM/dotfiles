@@ -1,3 +1,4 @@
 .config/nvim/lazy-lock.json
 .config/niri/local.kdl
 .config/zsh/local.zsh
+.config/ghostty/themes

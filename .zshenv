@@ -13,3 +13,4 @@ export GPG_TTY=$(tty)
 export PATH="$HOME/.local/bin:$PATH"
 
 . "$HOME/.cargo/env"
+. "$HOME/.local/share/../bin/env"
